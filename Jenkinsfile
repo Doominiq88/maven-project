@@ -14,6 +14,11 @@ pipeline {
              archiveArtifacts artifacts: '**/target/*war'
            }
          }
+         stages{
+           steps{
+             build job: 'package'
+           }
+         }
        }
          }
        }
