@@ -15,12 +15,6 @@ pipeline {
            }
          }
        }
-
-           stage ('1') {
-             steps {
-               sh "cp **/target/*.war /home/ivan/programms/tomcat-prod/webapps"
-             }     
-           }
          }
        }
   
