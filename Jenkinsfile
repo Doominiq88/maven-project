@@ -11,18 +11,16 @@ pipeline {
          post {
            success {
              echo 'Archiving...'
-             archiveArtifacts artifacts:'**/target/*.war'
+             archiveArtifacts artifacts: '**/target/*war'
            }
          }
        }
-       stage ('Deployments') {
-         parallel{
-           stage ('Deploy to Staging'){
+           stage ('Build'){
              steps {
-               sh "cp **/target/*.war /home/ivan/programms/tomcat-staging/webapps"
+               ehco "Build step..."
              }
-           }
-           stage ('Deploy to prod') {
+           
+           stage ('') {
              steps {
                sh "cp **/target/*.war /home/ivan/programms/tomcat-prod/webapps"
              }     
