@@ -15,12 +15,8 @@ pipeline {
            }
          }
        }
-           stage ('Build'){
-             steps {
-               ehco "Build step..."
-             }
-           
-           stage ('') {
+
+           stage ('1') {
              steps {
                sh "cp **/target/*.war /home/ivan/programms/tomcat-prod/webapps"
              }     
