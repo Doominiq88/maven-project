@@ -14,8 +14,8 @@ pipeline {
              archiveArtifacts artifacts: '**/target/*war'
            }
          }
-         stages{
-           steps{
+         stages ('New job') {
+           steps {
              build job: 'package'
            }
          }
